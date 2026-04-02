@@ -1,0 +1,917 @@
+/* Author: Mahmudul Hasan
+Mid-Term Project: Puran Dhaka Dine Restaurant Website
+Last Modified: 03/24/2026 */
+
+
+/* Reset CSS Start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+iframe {
+    max-width: 100%;
+    display: block;
+}
+
+img {
+    height: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #fffdf8;
+    color: #2f2a26;
+    line-height: 1.7;
+}
+/* Reset CSS End */
+
+/* Visually Hidden Class Start */
+.visually-hidden {
+    visibility: hidden;
+}
+/* Vissually Hidden Class End */
+
+/* Reusable CSS Start */
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2rem;
+    color: #6b3e26;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.65rem;
+}
+
+.section-heading p {
+    color: rgb(88, 80, 74);
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.section-label,
+.eyebrow {
+    color: hsl(18, 62%, 32%);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.45rem;
+}
+
+.section-copy {
+    color: rgb(81, 73, 67);
+    margin-bottom: 1.2rem;
+}
+
+.button-primary {
+    display: inline-block;
+    background-color: #7b2f1c;
+    color: white;
+    border: 1px solid #7b2f1c;
+    border-radius: 0.65rem;
+    padding: 0.9rem 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.button-primary:hover {
+    background-color: #5f2214;
+}
+
+.button-primary:focus,
+#contact-form input:focus,
+#contact-form select:focus,
+#contact-form textarea:focus,
+.site-nav a:focus {
+    outline: 3px solid rgb(199, 145, 94);
+    outline-offset: 2px;
+}
+
+.page-banner,
+.hero-section,
+.story-section,
+.about-details-section,
+.hours-section,
+.menu-section,
+.team-section,
+.contact-main-section,
+.map-section,
+.reservation-main-section,
+.policy-section {
+    padding: 3.5rem 0;
+}
+
+.page-banner {
+    background: linear-gradient(to bottom, #fffaf2, #fffdf8);
+    border-bottom: 1px solid #eadfce;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.hours-table,
+.policy-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: 1px solid #eadfce;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.hours-table th,
+.hours-table td,
+.policy-table th,
+.policy-table td {
+    border: 1px solid #eadfce;
+    padding: 0.85rem 1rem;
+    text-align: left;
+}
+
+.hours-table thead th,
+.policy-table thead th {
+    background-color: #fff1df;
+    color: #6b3e26;
+}
+
+.hours-table tbody tr:nth-child(even),
+.policy-table tbody tr:nth-child(even) {
+    background-color: #fffaf3;
+}
+
+.hours-table tbody tr:hover,
+.policy-table tbody tr:hover {
+    background-color: #fdf1e4;
+}
+
+.menu-placeholder,
+.team-photo-placeholder {
+    background-color: #fff8ef;
+    border: 2px dashed #d8cab7;
+    color: #7a6f66;
+    text-align: center;
+}
+/* Reusable CSS End */
+
+/* Header CSS Start */
+.site-header {
+    background-color: #fffaf2;
+    border-bottom: 1px solid #e7dccd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand-block {
+    float: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.brand-logo {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+}
+
+.brand-text h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #7b2f1c;
+    font-size: 1.85rem;
+    margin-bottom: 0.2rem;
+}
+
+.tagline {
+    color: rgb(101, 92, 84);
+    font-size: 0.98rem;
+}
+
+.site-nav {
+    float: left;
+    width: 100%;
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.site-nav a {
+    display: block;
+    text-decoration: none;
+    color: #4b3c33;
+    padding: 0.9rem 1rem;
+    border: 1px solid #d8cab7;
+    border-radius: 0.6rem;
+    background-color: #f8f3eb;
+    text-align: center;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+    background-color: #7b2f1c;
+    color: white;
+}
+/* Header CSS End */
+
+/* About Page CSS Start */
+#hero-figure {
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid #eadfce;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+
+.hero-image {
+    width: 100%;
+    min-height: 240px;
+    object-fit: cover;
+}
+
+#hero-figure figcaption {
+    padding: 1rem;
+    text-align: center;
+    color: rgb(89, 80, 73);
+    background-color: #fffaf4;
+}
+
+.two-column-layout {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.story-article,
+.review-aside,
+.info-card,
+.team-card,
+.contact-info-card,
+.aside-card {
+    background-color: #ffffff;
+    border: 1px solid #eadfce;
+    border-radius: 1rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.story-article,
+.review-aside {
+    padding: 1.5rem;
+}
+
+.story-article p + p {
+    margin-top: 1rem;
+}
+
+.review-aside h3 {
+    color: #6b3e26;
+    margin-bottom: 0.8rem;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.review-quote {
+    font-style: italic;
+    color: rgb(84, 76, 70);
+    margin-bottom: 0.8rem;
+}
+
+.review-credit {
+    color: #7b2f1c;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.external-link {
+    color: navy;
+    text-decoration: underline;
+}
+
+.info-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.info-card {
+    padding: 1.4rem;
+}
+
+.info-card h3 {
+    color: #6b3e26;
+    margin-bottom: 0.8rem;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.feature-list,
+.specialty-list {
+    padding-left: 1.2rem;
+}
+
+.feature-list li,
+.specialty-list li {
+    margin-bottom: 0.55rem;
+    color: rgb(83, 75, 69);
+}
+
+.term-list dt {
+    font-weight: 700;
+    color: #7b2f1c;
+    margin-top: 0.75rem;
+}
+
+.term-list dd {
+    color: rgb(83, 75, 69);
+    margin-left: 0;
+}
+
+.menu-section {
+    background-color: #fff8ef;
+}
+
+.menu-gallery {
+    display: grid;
+    gap: 1rem;
+}
+
+.menu-card {
+    background-color: #ffffff;
+    border: 1px solid #eadfce;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.menu-card figcaption {
+    padding: 0.95rem 1rem;
+    color: #6b3e26;
+    font-weight: 700;
+}
+
+.menu-placeholder {
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.team-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.team-card {
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.team-photo {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #eadfce;
+}
+
+.team-card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #6b3e26;
+    margin-bottom: 0.3rem;
+}
+
+.team-card p {
+    color: rgb(90, 82, 76);
+}
+/* About Page CSS End */
+
+/* Contact Page CSS Start */
+.contact-grid,
+.reservation-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contact-info-card {
+    padding: 1.5rem;
+}
+
+.contact-info-card h3,
+.contact-form-section h3,
+.reservation-form-section h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #6b3e26;
+    margin-bottom: 0.85rem;
+    font-size: 1.55rem;
+}
+
+.contact-info-card address {
+    font-style: normal;
+    color: rgb(82, 74, 68);
+    margin-bottom: 1rem;
+}
+
+.contact-block + .contact-block {
+    margin-top: 1rem;
+}
+
+.contact-block h4 {
+    color: #7b2f1c;
+    margin-bottom: 0.35rem;
+}
+
+.contact-info-card a {
+    color: #7b2f1c;
+    text-decoration: none;
+}
+
+.contact-info-card a:hover {
+    text-decoration: underline;
+}
+
+#contact-form fieldset {
+    border: 1px solid #eadfce;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    background-color: #fffaf4;
+    margin-bottom: 1.25rem;
+}
+
+#contact-form legend {
+    color: #7b2f1c;
+    font-weight: 700;
+    padding: 0 0.35rem;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 0.45rem;
+    color: rgb(82, 74, 68);
+    font-weight: 600;
+}
+
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+    width: 100%;
+    padding: 0.85rem 0.95rem;
+    border: 1px solid #d8cab7;
+    border-radius: 0.65rem;
+    background-color: #ffffff;
+    font: inherit;
+    margin-bottom: 1rem;
+}
+
+#contact-form textarea {
+    resize: vertical;
+    min-height: 170px;
+}
+
+#map-box {
+    border: 1px solid #eadfce;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+#map-box iframe {
+    width: 100%;
+    min-height: 320px;
+    border: 0;
+}
+/* Contact Page CSS End */
+
+/* Reservation Page CSS Start */
+.reservation-main-section {
+    padding: 3.5rem 0;
+    background-color: #fffdf8;
+}
+
+.reservation-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.reservation-form-section h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #6b3e26;
+    margin-bottom: 0.85rem;
+    font-size: 1.55rem;
+}
+
+.reservation-form-section #reservation-form {
+    background-color: transparent;
+}
+
+.split-form,
+.triple-form {
+    display: grid;
+    gap: 1rem;
+}
+
+#reservation-form fieldset {
+    border: 1px solid #eadfce;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    background-color: #fffaf4;
+    margin-bottom: 1.25rem;
+}
+
+#reservation-form legend {
+    color: #7b2f1c;
+    font-weight: 700;
+    padding: 0 0.35rem;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 0.45rem;
+    color: rgb(82, 74, 68);
+    font-weight: 600;
+}
+
+.form-field input,
+.form-field select,
+#reservation-form textarea {
+    width: 100%;
+    padding: 0.85rem 0.95rem;
+    border: 1px solid #d8cab7;
+    border-radius: 0.65rem;
+    background-color: #ffffff;
+    font: inherit;
+    margin-bottom: 1rem;
+}
+
+#reservation-form textarea {
+    resize: vertical;
+    min-height: 170px;
+}
+
+.radio-stack {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.radio-stack label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: rgb(82, 74, 68);
+    font-weight: 500;
+}
+
+.radio-stack input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
+}
+
+.checkbox-row input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.checkbox-row label {
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 500;
+    color: rgb(82, 74, 68);
+}
+
+.reservation-aside {
+    display: grid;
+    gap: 1rem;
+}
+
+.aside-card {
+    background-color: #ffffff;
+    border: 1px solid #eadfce;
+    border-radius: 1rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    padding: 1.2rem;
+}
+
+.aside-card h4 {
+    color: #7b2f1c;
+    margin-bottom: 0.45rem;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.aside-card p {
+    color: rgb(82, 74, 68);
+}
+
+.dining-figure {
+    background-color: #ffffff;
+    border: 1px solid #eadfce;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.dining-image {
+    width: 100%;
+    min-height: 240px;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.98;
+}
+
+.dining-figure figcaption {
+    padding: 0.95rem 1rem;
+    text-align: center;
+    color: rgb(89, 80, 73);
+    background-color: #fffaf4;
+}
+
+.policy-section {
+    padding: 3.5rem 0;
+    background-color: #fff8ef;
+}
+
+.policy-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: 1px solid #eadfce;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.policy-table th,
+.policy-table td {
+    border: 1px solid #eadfce;
+    padding: 0.85rem 1rem;
+    text-align: left;
+}
+
+.policy-table thead th {
+    background-color: #fff1df;
+    color: #6b3e26;
+}
+
+.policy-table tbody tr:nth-child(even) {
+    background-color: #fffaf3;
+}
+
+.policy-table tbody tr:hover {
+    background-color: #fdf1e4;
+}
+/* Reservation Page CSS End */
+
+/* Footer CSS Start */
+.site-footer {
+    background-color: #2f1f18;
+    color: #f6ede6;
+    padding-top: 2.5rem;
+}
+
+.footer-grid {
+    display: grid;
+    gap: 1.2rem;
+    padding-bottom: 2rem;
+}
+
+.footer-col h2 {
+    color: #ffddb9;
+    margin-bottom: 0.7rem;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.footer-col p,
+.footer-col address {
+    color: #f4e8de;
+    font-style: normal;
+}
+
+.site-footer a {
+    color: #ffd7b0;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1rem 0;
+    font-size: 0.95rem;
+}
+/* Footer CSS End */
+
+/* ID (#) Specific CSS Start */
+
+#reservation-form {
+    scroll-margin-top: 120px;
+
+}
+
+/* ID (#) Specific CSS End */
+
+/* Responsive CSS Start */
+
+/* Base Mobile Navigation Section */
+ /* Nav Mobile View Start */
+.site-nav ul {
+    align-items: stretch;
+}
+ /* Nav Mobile View End */
+
+/* Breakpoint 1 Start: min-width 600px */
+@media (min-width: 600px) {
+    .section-heading h2 {
+        font-size: 2.25rem;
+    }
+
+    .hero-image {
+        min-height: 320px;
+    }
+
+    .menu-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .site-nav ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .site-nav a {
+        min-width: 170px;
+    }
+
+    .split-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .triple-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Breakpoint 1 End */
+
+/* Breakpoint 2 Start: min-width 768px */
+@media (min-width: 768px) {
+    .brand-block {
+        width: 52%;
+        float: left;
+        margin-bottom: 0;
+    }
+
+    .site-nav {
+        width: 44%;
+        float: right;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-height: 88px;
+    }
+
+    .site-nav ul {
+        justify-content: flex-end;
+    }
+
+    .site-nav a {
+        min-width: 150px;
+    }
+
+    .two-column-layout,
+    .contact-grid,
+    .reservation-grid {
+        grid-template-columns: 1.35fr 0.95fr;
+        align-items: start;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .menu-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #map-box iframe {
+        min-height: 420px;
+    }
+
+    .triple-form {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Breakpoint 2 End */
+
+/* Breakpoint 3 Start: min-width 1024px */
+@media (min-width: 1024px) {
+    .section-heading h2 {
+        font-size: 2.6rem;
+    }
+
+    .hero-image {
+        min-height: 420px;
+    }
+
+    .menu-gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hours-table th,
+    .hours-table td,
+    .policy-table th,
+    .policy-table td {
+        padding: 1rem 1.2rem;
+    }
+
+    #map-box iframe {
+        min-height: 480px;
+    }
+}
+/* Breakpoint 3 End */
+
+/* Breakpoint 4 Start: min-width 1280px */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1260px;
+    }
+
+    .site-nav a {
+        min-width: 165px;
+    }
+
+    .menu-gallery {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+/* Breakpoint 4 End */
+
+/* Responsive CSS End */

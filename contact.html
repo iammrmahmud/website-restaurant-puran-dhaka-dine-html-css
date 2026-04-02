@@ -1,0 +1,196 @@
+<!-- Author: Mahmudul Hasan -->
+<!-- Mid-Term Project: Puran Dhaka Dine Restaurant Website -->
+<!-- Page: Contact Us -->
+ <!--Last Modified: 03/19/2026-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport meta tag for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title displayed in browser tab -->
+    <title>Puran Dhaka Dine | Contact Us</title>
+    <!--Favicon link for browser tab icon-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- External CSS stylesheet link -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="about-top">
+
+    <!-- Header starts here -->
+    <header class="site-header">
+        <div class="container clearfix">
+            <div class="brand-block" id="brand-home">
+                <!--Brand Logo-->
+                <a href="index.html" class="brand-logo-link">
+                    <img src="images/logo_trans.png" alt="Puran Dhaka Dine restaurant logo" class="brand-logo">
+                </a>
+                <!--Brand Name and Tagline-->
+                <div class="brand-text">
+                    <h1>Puran Dhaka Dine</h1>
+                    <p class="tagline">Authentic Flavors of Old Dhaka, Served Fresh in America</p>
+                </div>
+            </div>
+
+            <!-- Navigation bar-->
+            <nav class="site-nav" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="index.html">About Us</a></li> 
+                    <!-- Class="active" is used to highlight the current page in the navigation -->
+                    <li><a href="contact.html" class="active">Contact Us</a></li>       
+                    <li><a href="reservation.html">Reservation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section starts here -->
+    <main>
+        <!-- Contact heading section -->
+        <section class="page-banner">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">Get in Touch</p>
+                    <h2>We Would Love to Hear From You</h2>
+                    <p>Ask us about our halal menu, catering support, family seating, or reservation availability.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact info and form layout -->
+        <section class="contact-main-section">
+            <h2 class="visually-hidden">Contact Information and Form</h2>
+            <div class="container contact-grid">
+
+                <!-- Contact information card with address, hours, and social media -->
+                <aside class="contact-info-card">
+                    <h3>Visit or Reach Out</h3>
+                    <!-- Address and Contact details -->
+                    <address>
+                        <strong>Puran Dhaka Dine</strong><br>
+                        123 Liberty Avenue<br>
+                        Brooklyn, NY 11220<br>
+                        Phone: <a href="tel:+17185550147">(718) 555-0147</a><br>
+                        Email: <a href="mailto:info@purandhakadine.com">info@purandhakadine.com</a>
+                    </address>
+
+                    <!-- Business Hours -->
+                    <div class="contact-block">
+                        <h4>Business Hours</h4>
+                        <p>Breakfast starts at 8:00 AM on weekdays and 9:00 AM on weekends.</p>
+                        <p>Lunch and dinner service are available every day with extended Friday and Saturday hours.</p>
+                    </div>
+
+                    <!-- Social media links -->
+                    <div class="contact-block">
+                        <h4>Social Media</h4>
+                        <p>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a><br>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a><br>
+                            <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+                        </p>
+                    </div>
+                </aside>
+
+                <section class="contact-form-section">
+                    <h3>Send Us a Message</h3>
+                    <p class="section-copy">Complete the form below and our team will respond as soon as possible during business hours.</p>
+
+                    <!-- Contact form structure starts here -->
+                    <form action="#" method="post" id="contact-form">
+                        <!-- Using fieldset and legend for better accessibility and form grouping -->
+                        <fieldset>
+                            <legend>Contact Form</legend>
+
+                            <!-- Full Name Box -->
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+
+                            <!-- Email Address Box -->
+                            <label for="email-address">Email Address</label>
+                            <input type="email" id="email-address" name="email-address" placeholder="Enter your email address" required>
+
+                            <!-- Phone Number Box -->
+                            <label for="phone-number">Phone Number</label>
+                            <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number" required>
+
+                            <!-- Subject Select with additional five Dropdown Options -->
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general-question">General Question</option>
+                                <option value="menu-inquiry">Menu Inquiry</option>
+                                <option value="catering-request">Catering Request</option>
+                                <option value="reservation-help">Reservation Help</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+
+                            <!-- Message Textarea -->
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="8" placeholder="Write your message here" required></textarea>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="button-primary">Submit Message</button>
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
+        </section>
+
+        <!-- Embedded map section starts here -->
+        <section class="map-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">Find Our Location</p>
+                    <h2>Visit Us in Brooklyn</h2>
+                </div>
+
+                <div id="map-box">
+                    <!-- Google Maps iframe -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.0290409821346!2d-73.90819992337758!3d40.67332907139951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25c5b6ed086fd%3A0xfac13c033e02c0b!2s123%20Liberty%20Ave%2C%20Brooklyn%2C%20NY%2011212!5e0!3m2!1sen!2sus!4v1773718836372!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google map showing Puran Dhaka Dine location"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer starts here -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+
+            <!-- Footer column 1: Brand Info Section-->
+            <section class="footer-col">
+                <h2>Puran Dhaka Dine</h2>
+                <p>Authentic Flavors of Old Dhaka</p>
+            </section>
+
+            <!-- Footer column 2: Contact Info Section-->
+            <section class="footer-col">
+                <h2>Contact</h2>
+                <address>
+                    123 Liberty Avenue, Brooklyn, NY 11220<br>
+                    Phone: <a href="tel:+17185550147">(718) 555-0147</a><br>
+                    Email: <a href="mailto:info@purandhakadine.com">info@purandhakadine.com</a>
+                </address>
+            </section>
+
+            <!-- Footer column 3: Social Media Section-->
+            <section class="footer-col">
+                <h2>Follow Us</h2>
+                <p>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a> |
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a> |
+                    <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+                </p>
+            </section>
+        </div>
+
+        <!-- Footer: Copyright Section-->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Puran Dhaka Dine. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

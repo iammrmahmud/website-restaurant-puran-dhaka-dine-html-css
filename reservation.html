@@ -1,0 +1,291 @@
+<!-- Author: Mahmudul Hasan -->
+<!-- Mid-Term Project: Puran Dhaka Dine Restaurant Website -->
+<!-- Page: Reservation -->
+ <!--Last Modified: 03/19/2026-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport meta tag for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title displayed in browser tab -->
+    <title>Puran Dhaka Dine | Reservation</title>
+    <!--Favicon link for browser tab icon-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- External CSS stylesheet link -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="about-top">
+
+    <!-- Header starts here -->
+    <header class="site-header">
+        <div class="container clearfix">
+            <div class="brand-block" id="brand-home">
+                <!--Brand Logo-->
+                <a href="index.html" class="brand-logo-link">
+                    <img src="images/logo_trans.png" alt="Puran Dhaka Dine restaurant logo" class="brand-logo">
+                </a>
+                <!--Brand Name and Tagline-->
+                <div class="brand-text">
+                    <h1>Puran Dhaka Dine</h1>
+                    <p class="tagline">Authentic Flavors of Old Dhaka, Served Fresh in America</p>
+                </div>
+            </div>
+
+            <!-- Navigation bar-->
+            <nav class="site-nav" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="index.html">About Us</a></li> 
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <!-- Class="active" is used to highlight the current page in the navigation -->
+                    <li><a href="reservation.html" class="active">Reservation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section starts here -->
+    <main>
+        <!-- Reservation heading section -->
+        <section class="page-banner">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">Reserve Your Table</p>
+                    <h2>Plan Your Dining Experience in Advance</h2>
+                    <p>Book your table for family meals, celebrations, and special halal dining moments at Puran Dhaka Dine.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation form and dining image layout -->
+        <section class="reservation-main-section">
+            <h2 class="visually-hidden">Reservation Form and Dining Information</h2>
+            <div class="container reservation-grid">
+
+                <section class="reservation-form-section">
+                    <h3>Reservation Form</h3>
+                    <p class="section-copy">Please complete the form below so our team can prepare a comfortable and welcoming table for you.</p>
+
+                    <!-- Reservation form groups start here -->
+                    <form action="#" method="post" id="reservation-form">
+                        <!-- Using fieldset and legend for better accessibility and form grouping -->
+                        <!-- Fieldset 01: Guest Information -->
+                        <fieldset>
+                            <legend>Guest Information</legend>
+                            <div class="split-form">
+
+                                <!-- Guest Name Box-->
+                                <div class="form-field">
+                                    <label for="guest-name">Guest Name</label>
+                                    <input type="text" id="guest-name" name="guest-name" placeholder="Enter guest name" required>
+                                </div>
+
+                                <!-- Email Address Box-->
+                                <div class="form-field">
+                                    <label for="guest-email">Email</label>
+                                    <input type="email" id="guest-email" name="guest-email" placeholder="Enter email address" required>
+                                </div>
+
+                                <!-- Phone Number Box-->
+                                <div class="form-field">
+                                    <label for="guest-phone">Phone Number</label>
+                                    <input type="tel" id="guest-phone" name="guest-phone" placeholder="Enter phone number" required>
+                                </div>
+
+                                <!-- Guest Count Dropdown with additional five options -->
+                                <div class="form-field">
+                                    <label for="guest-count">Number of Guests</label>
+                                    <select id="guest-count" name="guest-count" required>
+                                        <option value="">Select number of guests</option>
+                                        <option value="1-2">1 - 2 Guests</option>
+                                        <option value="3-4">3 - 4 Guests</option>
+                                        <option value="5-6">5 - 6 Guests</option>
+                                        <option value="7-8">7 - 8 Guests</option>
+                                        <option value="9-plus">9+ Guests</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Fieldset 02: Reservation Details -->
+                        <fieldset>
+                            <legend>Reservation Details</legend>
+                            <div class="triple-form">
+
+                                <!-- Date of Reservation -->
+                                <div class="form-field">
+                                    <label for="reservation-date">Date of Reservation</label>
+                                    <input type="date" id="reservation-date" name="reservation-date" required>
+                                </div>
+
+                                <!-- Time of Reservation -->
+                                <div class="form-field">
+                                    <label for="reservation-time">Time</label>
+                                    <input type="time" id="reservation-time" name="reservation-time" required>
+                                </div>
+
+                                <!-- Occasion Note Box -->
+                                <div class="form-field">
+                                    <label for="occasion-note">Occasion Note</label>
+                                    <input type="text" id="occasion-note" name="occasion-note" placeholder="Birthday, family dinner, anniversary">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Fieldset 03: Seating Preference -->
+                        <fieldset>
+                            <legend>Seating Preference</legend>
+
+                            <!-- Radio buttons for seating preference with three options -->
+                             <!-- Radio button type is using here for one selection only -->
+                            <div class="radio-stack">
+                                <label><input type="radio" name="seating" value="Indoor" required> Indoor</label>
+                                <label><input type="radio" name="seating" value="Outdoor"> Outdoor</label>
+                                <label><input type="radio" name="seating" value="Bar"> Bar</label>
+                            </div>
+                        </fieldset>
+
+                        <!-- Fieldset 04: Special Requests -->
+                        <fieldset>
+                            <legend>Special Requests</legend>
+
+                            <!-- Textarea for special requests such as dietary needs, accessibility, or celebration details -->
+                            <label for="special-requests">Tell us about any dietary, accessibility, or celebration requests</label>
+                            <textarea id="special-requests" name="special-requests" rows="7" placeholder="Write any special request here"></textarea>
+                        </fieldset>
+
+                        <div class="checkbox-row">
+                            <!-- Terms and conditions agreement checkbox -->
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the reservation terms and conditions.</label>
+                        </div>
+
+                        <!-- Submit button for the reservation form -->
+                        <button type="submit" class="button-primary">Book Table</button>
+                    </form>
+                </section>
+
+                <!-- Reservation aside content with dining image -->
+                <aside class="reservation-aside">
+                    <!-- Dining Information Card -->
+                    <article class="aside-card">
+                        <h4>Dining Information</h4>
+                        <p>Advance reservations are highly recommended for Fridays, Saturdays, and family celebrations.</p>
+                    </article>
+                    <!-- Halal Commitment Card -->
+                    <article class="aside-card">
+                        <h4>Halal Commitment</h4>
+                        <p>Every meal is prepared using trusted ingredients so guests can dine with complete halal confidence.</p>
+                    </article>
+                    <!-- Warm Atmosphere Card -->
+                    <article class="aside-card">
+                        <h4>Warm Atmosphere</h4>
+                        <p>Our dining room is designed for comfort, conversation, and memorable community gatherings.</p>
+                    </article>
+
+                    <!-- Dining image with caption -->
+                    <figure class="dining-figure">
+                        <img src="images/reservation-interior.jpg" alt="Reserved dining setup at Puran Dhaka Dine" class="dining-image">
+                        <figcaption>A welcoming table prepared for families, friends, and special occasions.</figcaption>
+                    </figure>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Reservation policy table starts here -->
+        <section class="policy-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">Reservation Policies</p>
+                    <h2>Helpful Information Before You Visit</h2>
+                </div>
+
+                <div class="table-wrapper">
+                    <!-- A table with 6 rows and 2 columns -->
+                    <!-- Each table body row has a heading -->
+                    <table class="policy-table">
+
+                        <!-- Table header -->
+                        <thead>
+                            <!--1st row: Column headers -->
+                            <tr>
+                                <th scope="col">Policy Area</th>
+                                <th scope="col">Details</th>
+                            </tr>
+                        </thead>
+
+                        <!-- Table body with 5 policy rows -->
+                        <tbody>
+                            <!-- 2nd row: Cancellation policy -->
+                            <tr>
+                                <th scope="row">Cancellation</th>
+                                <td>Please call at least 2 hours in advance if you need to cancel.</td>
+                            </tr>
+                            <!-- 3rd row: Large group policy -->
+                            <tr>
+                                <th scope="row">Large Groups</th>
+                                <td>Groups of 9 or more may require phone confirmation from our staff.</td>
+                            </tr>
+                            <!-- 4th row: Deposit policy -->
+                            <tr>
+                                <th scope="row">Deposit</th>
+                                <td>No deposit is needed for regular reservations. Special event bookings may differ.</td>
+                            </tr>
+                            <!-- 5th row: Late arrival policy -->
+                            <tr>
+                                <th scope="row">Late Arrival</th>
+                                <td>Tables may be held for 15 minutes after the reservation time.</td>
+                            </tr>
+                            <!-- 6th row: Special requests policy -->
+                            <tr>
+                                <th scope="row">Special Requests</th>
+                                <td>We will do our best to honor seating and dietary requests based on availability.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer starts here -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+
+            <!-- Footer column 1: Brand Info Section-->
+            <section class="footer-col">
+                <h2>Puran Dhaka Dine</h2>
+                <p>Authentic Flavors of Old Dhaka</p>
+            </section>
+
+            <!-- Footer column 2: Contact Info Section-->
+            <section class="footer-col">
+                <h2>Contact</h2>
+                <address>
+                    123 Liberty Avenue, Brooklyn, NY 11220<br>
+                    Phone: <a href="tel:+17185550147">(718) 555-0147</a><br>
+                    Email: <a href="mailto:info@purandhakadine.com">info@purandhakadine.com</a>
+                </address>
+            </section>
+
+            <!-- Footer column 3: Social Media Section-->
+            <section class="footer-col">
+                <h2>Follow Us</h2>
+                <p>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a> |
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a> |
+                    <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+                </p>
+            </section>
+        </div>
+
+        <!-- Footer: Copyright Section-->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Puran Dhaka Dine. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
