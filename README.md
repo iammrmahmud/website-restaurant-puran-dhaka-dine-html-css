@@ -123,8 +123,10 @@ restaurant-website/
     ├── reservation-interior.jpg
     ├── Sadia.jpg
     └── tehari.jpg
+```
+---
 
-    All files are structured to maintain separation of concerns:
+All files are structured to maintain separation of concerns:
 - HTML files handle content  
 - CSS file handles styling  
 - Images are stored in a dedicated folder  
